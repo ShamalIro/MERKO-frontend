@@ -1,0 +1,36 @@
+/* Admin Layout Styles - DeliveryDash Theme */
+.admin-layout {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+  display: flex;
+}
+
+.admin-main-content {
+  flex: 1;
+  margin-left: 280px;
+  padding: 2rem;
+  min-height: 100vh;
+  overflow-x: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .admin-main-content {
+    margin-left: 260px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-main-content {
+    margin-left: 240px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-main-content {
+    margin-left: 220px;
+    padding: 0.75rem;
+  }
+}

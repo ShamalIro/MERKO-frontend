@@ -1,0 +1,283 @@
+.supplier-orders-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Orders Specific Styles */
+.orders-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-button.active {
+    color: white;
+    border-bottom-color: #ff6b6b;
+}
+
+.orders-stats {
+    display: flex;
+    gap: 1rem;
+}
+
+.stat-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-count {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.pending-badge .stat-count {
+    color: #ffd93d;
+}
+
+.total-badge .stat-count {
+    color: #6bcf7f;
+}
+
+.orders-list-section {
+    margin-top: 2rem;
+}
+
+.orders-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.order-item-row {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.order-item-info {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 1rem;
+    align-items: start;
+}
+
+.product-info h4 {
+    margin: 0 0 0.5rem 0;
+    color: white;
+}
+
+.product-info p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.customer-info p,
+.quantity-price p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.status-section {
+    display: flex;
+    align-items: center;
+}
+
+.order-item-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.confirm-btn, .ship-btn, .deliver-btn, .cancel-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.confirm-btn {
+    background: #4ecdc4;
+    color: white;
+}
+
+.ship-btn {
+    background: #45b7d1;
+    color: white;
+}
+
+.deliver-btn {
+    background: #96ceb4;
+    color: white;
+}
+
+.cancel-btn {
+    background: #ff6b6b;
+    color: white;
+}
+
+.confirm-btn:hover { background: #3db8af; }
+.ship-btn:hover { background: #3aa5c4; }
+.deliver-btn:hover { background: #85c0a0; }
+.cancel-btn:hover { background: #e55a5a; }
+
+.no-orders {
+    text-align: center;
+    padding: 3rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.no-orders-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Status badges */
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.status-pending { background: #ffd93d; color: #333; }
+.status-confirmed { background: #4ecdc4; color: white; }
+.status-shipped { background: #45b7d1; color: white; }
+.status-delivered { background: #96ceb4; color: white; }
+.status-cancelled { background: #ff6b6b; color: white; }
+.status-received { background: #6bcf7f; color: white; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-item-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .order-item-info {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .order-item-actions {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .orders-tabs {
+        flex-direction: column;
+    }
+}
+
+
+/* Add these styles to your existing CSS */
+
+.order-item-row.view-only {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.order-item-row.view-only .order-item-actions {
+    opacity: 0.6;
+}
+
+.view-only-text {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+/* Stock information styles */
+.quantity-price p strong {
+    color: #4ecdc4;
+}
+
+/* Low stock warning */
+.quantity-price p:nth-child(2) {
+    color: #ffd93d;
+    font-weight: bold;
+}
+
+/* Insufficient stock warning */
+.quantity-price p.insufficient-stock {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+/* Status specific styles */
+.status-pending { background: #ffd93d; color: #333; }
+.status-confirmed { background: #4ecdc4; color: white; }
+.status-shipped { background: #45b7d1; color: white; }
+.status-delivered { background: #96ceb4; color: white; }
+.status-cancelled { background: #ff6b6b; color: white; }
+.status-received { background: #6bcf7f; color: white; }
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .order-item-info {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .order-item-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .order-item-actions button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}

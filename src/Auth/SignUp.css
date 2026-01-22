@@ -1,0 +1,223 @@
+/* SignUp Component Styles */
+.signup-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.signup-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.signup-header {
+  margin-bottom: 2rem;
+}
+
+.signup-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.signup-header p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.step-indicator {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.step-indicator h3 {
+  color: #374151;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.role-selection {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.role-card {
+  flex: 1;
+  max-width: 180px;
+  padding: 2rem 1.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.role-card:hover {
+  border-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+}
+
+.role-card.selected {
+  border-color: #2563eb;
+  background: #eff6ff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.15);
+}
+
+.role-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.role-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.role-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.role-card p {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.role-card.selected h4 {
+  color: #2563eb;
+}
+
+.role-card.selected p {
+  color: #1e40af;
+}
+
+.next-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  animation: slideIn 0.3s ease-out;
+}
+
+.next-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-link {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.login-link a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.signup-footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.signup-footer p {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .signup-container {
+    padding: 1rem;
+  }
+  
+  .signup-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .signup-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .role-selection {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .role-card {
+    max-width: none;
+    padding: 1.5rem;
+  }
+  
+  .role-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .signup-header h1 {
+    font-size: 1.3rem;
+  }
+  
+  .role-card {
+    padding: 1.2rem;
+  }
+}

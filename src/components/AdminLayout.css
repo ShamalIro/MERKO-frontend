@@ -1,0 +1,44 @@
+/* Admin Layout Styles */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.admin-main-content {
+  flex: 1;
+  margin-left: 280px;
+  padding: 0;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-main-content {
+    margin-left: 70px;
+  }
+}
+
+/* Content area styling */
+.admin-content {
+  padding: 2rem;
+  max-width: 100%;
+}
+
+.admin-page-header {
+  margin-bottom: 2rem;
+}
+
+.admin-page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.admin-page-subtitle {
+  color: #64748b;
+  font-size: 1rem;
+}

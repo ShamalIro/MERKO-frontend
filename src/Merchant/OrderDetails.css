@@ -1,0 +1,272 @@
+.order-details-page {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.order-details-sidebar {
+    width: 250px;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.order-details-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.order-details-header {
+    background: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.order-details-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.order-header {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.edit-btn, .save-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-order-btn, .cancel-edit-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-summary-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.summary-grid {
+    display: grid;
+    gap: 10px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.summary-item.total {
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: none;
+}
+
+.details-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.details-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.info-content p {
+    margin: 10px 0;
+    padding: 5px 0;
+}
+
+.order-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+}
+
+.item-price {
+    text-align: right;
+}
+
+.item-price strong {
+    display: block;
+    font-size: 16px;
+    color: #28a745;
+}
+
+.status-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Add these styles to fix the input visibility and layout */
+
+.quantity-controls {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.quantity-controls button {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.quantity-controls input {
+    width: 60px;
+    padding: 8px;
+    margin: 0 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background: white;
+    color: #333; /* Ensure text is visible */
+}
+
+.quantity-controls input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.item-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cancel-item-btn, .receive-item-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.cancel-item-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.receive-item-btn {
+    background: #28a745;
+    color: white;
+}
+
+.global-edit-section {
+    margin-top: 15px;
+}
+
+.edit-btn {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.global-edit-actions {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    display: flex;
+    gap: 10px;
+}
+
+.save-btn {
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cancel-edit-btn {
+    padding: 10px 20px;
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.status-received {
+    background: #20c997;
+    color: white;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.order-info {
+    flex: 1;
+}
